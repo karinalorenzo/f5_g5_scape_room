@@ -55,4 +55,19 @@ body{
     margin: 0 auto;
     padding: 0 var(--space-s);
 }
-  
+
+/* -------------------------------------------------------
+   HEADER
+------------------------------------------------------- */
+
+.header {
+    padding: var(--space-m) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo{
+    width: 75px;
+    height: auto;
+}
