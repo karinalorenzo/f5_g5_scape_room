@@ -1,0 +1,54 @@
+/* Fondo específico de la página start */
+.start-page {
+    background: url(/assets/img/bg-purple-texture.png) no-repeat top center / cover;
+  }
+  
+  /* Header exclusivo de la página start */
+  .start-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-m) var(--space-s);
+    position: relative;
+  }
+  
+
+/* Contenedor que permite la superposición */
+.start-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Imagen central */
+  .start-illustration {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Card superpuesto */
+  .start-card {
+    position: absolute;
+    left: 50%;
+    bottom: -40px; 
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    background: rgba(202, 168, 116, 0.60); /* dorado con transparencia */
+    padding: 0.2rem;
+    margin-bottom: 250px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  .start-card p {
+    font-size: 20px;
+    font-family: Lato, sans-serif;
+    color: var(--black);
+  }
+  
+  
+  
+ 
+  
