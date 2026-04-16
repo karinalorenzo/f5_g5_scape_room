@@ -129,3 +129,25 @@ img {
     color: var(--gold);
     text-transform: uppercase;
   }
+
+/* -------------------------------------------------------
+   GENERIC SECTION LAYOUT
+------------------------------------------------------- */
+
+.section{
+    text-align: center;
+    padding: var(--space-xl) var(--space-s);
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: var(--fs-section-title);
+    color: var(--gold);
+    margin-bottom: var(--space-m);
+}
+
+.section-paragraph {
+    font-size: var(--fs-body-large);
+    max-width: 750px;
+    margin: 0 auto;
+}
