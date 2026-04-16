@@ -1,5 +1,5 @@
 /* -------------------------------------------------------
-   VARIABLES (FIGMA)
+   VARIABLES
 ------------------------------------------------------- */
 :root {
     /* Colors */
@@ -14,16 +14,19 @@
     --white: #FFFFFF;
   
     --muted: rgba(0, 0, 0, 0.20);
-    --shadow-gold: 0px 4px 40px rgba(240, 208, 128, 0.50);
+    --shadow-gold: 
+    0 0 40px rgba(240,208,128,0.5),
+    0 0 80px rgba(201,168,76,0.3),
+    4px 4px 0px rgba(107,47,160,0.6);
   
     /* Fonts */
     --font-title: "Cinzel Decorative", serif;
     --font-body: "Lato", sans-serif;
   
-    /* Font sizes (from Figma) */
+    /* Font sizes */
     --fs-hero-title: 96px;
     --fs-section-title: 64px;
-    --fs-button: 32px;
+    --fs-button: 24px;
     --fs-body-large: 32px;
     --fs-subtitle: 24px;
   
@@ -56,6 +59,16 @@ body{
     padding: 0 var(--space-s);
 }
 
+img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
 /* -------------------------------------------------------
    HEADER
 ------------------------------------------------------- */
@@ -71,3 +84,48 @@ body{
     width: 75px;
     height: auto;
 }
+
+/* -------------------------------------------------------
+   HERO 
+------------------------------------------------------- */
+
+.hero{
+    text-align: center;
+    padding: var(--space-xl) var(--space-s);
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: var(--fs-hero-title);
+    color: var(--gold);
+    text-shadow: var(--shadow-gold);
+    margin-bottom: var(--space-xl) var(--space-s);
+}
+
+.hero-subtitle {
+    font-family: var(--font-title);
+    font-size: var(--fs-subtitle);
+    color: var(--gold);
+    text-shadow: var(--shadow-gold);
+    margin-bottom: var(--space-l) var(--space-s);
+}
+
+.hero-description {
+    font-size: var(--fs-body-large);
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: var(--space-m);
+}
+
+/* Button outline */
+.btn-outline {
+    display: inline-block;
+    margin-top: var(--space-m);
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: 2px solid var(--gold);
+    font-family: var(--font-title);
+    font-size: var(--fs-button);
+    color: var(--gold);
+    text-transform: uppercase;
+  }
