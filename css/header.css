@@ -18,7 +18,11 @@
   }
   
   .header.scrolled {
+      /*
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(4px);
+      */
+      padding: var(--space-s);
+      justify-content: flex-start;
     }
   
