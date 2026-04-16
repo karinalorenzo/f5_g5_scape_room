@@ -1,0 +1,39 @@
+/* -------------------------------------------------------
+   VARIABLES (FIGMA)
+------------------------------------------------------- */
+:root {
+    /* Colors */
+    --gold: #C0A666;
+    --gold-strong: #B78402;
+    --gold-light: #E4A300;
+  
+    --lavender: #F0EAFF;
+    --lavender-strong: #E4CCFF;
+  
+    --black: #0B0C11;
+    --white: #FFFFFF;
+  
+    --muted: rgba(0, 0, 0, 0.20);
+    --shadow-gold: 0px 4px 40px rgba(240, 208, 128, 0.50);
+  
+    /* Fonts */
+    --font-title: "Cinzel Decorative", serif;
+    --font-body: "Lato", sans-serif;
+  
+    /* Font sizes (from Figma) */
+    --fs-hero-title: 96px;
+    --fs-section-title: 64px;
+    --fs-button: 32px;
+    --fs-body-large: 32px;
+    --fs-subtitle: 24px;
+  
+    /* Spacing */
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-l: 4rem;
+    --space-xl: 6rem;
+  
+    /* Layout */
+    --max-width: 1200px;
+  }
+  
