@@ -61,8 +61,7 @@ All design decisions, technical notes, and detailed documentation are available 
 
 
 ## Autors
-Karina Lorenzo
-Daniel Molina
+Karina Lorenzo y Daniel Molina
 
 ## Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes. I welcome all contributions and improvements!
