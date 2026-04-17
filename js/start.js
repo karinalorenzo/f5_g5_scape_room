@@ -11,9 +11,9 @@
         setTimeout(()=> {
         document.getElementById("message-container").classList.replace("hide", "show");
         document.getElementById("message-container").classList.add("animate-zoom");
-        }, 2000);
+        }, 1000);
     }, 2000);
-    }, 2000);
+    }, 4000);
     /**
      * funcion de mostrar ocultar
      */
