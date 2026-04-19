@@ -1,15 +1,18 @@
 /* -------------------------------------------------------
    HEADER
 ------------------------------------------------------- */
-
+header {
+  
+}
 .header {
-    position: sticky;
+    /*position: sticky;*/
     top: 0;
     z-index: 1000;
     padding: var(--space-m) 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   .header-logo {
@@ -18,10 +21,8 @@
   }
   
   .header.scrolled {
-      /*
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(4px);
-      */
       padding: var(--space-s);
       justify-content: flex-start;
     }

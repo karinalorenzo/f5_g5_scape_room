@@ -6,11 +6,12 @@
 
 .internal-title {
    color: #F0D080;
-   font-size: 4rem;
+   font-size: 3rem;
    font-family: "Cinzel Decorative", serif;
    font-weight: 700;
    word-wrap: break-word;
    text-shadow: 5px 5px 0px rgba(255, 184, 7, 0.25);
    text-align: center;
    text-transform: uppercase;
+   filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
 }

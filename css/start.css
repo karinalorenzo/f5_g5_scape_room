@@ -62,10 +62,6 @@
     color: var(--white);
   }
 
-  .internal-title{
-    filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));
-  }
-
   .start-logo {
     /* Sintaxis: drop-shadow(parámetro-X parámetro-Y desenfoque color) */
     filter: drop-shadow(20px 20px 20px rgba(255, 255, 255, 1));

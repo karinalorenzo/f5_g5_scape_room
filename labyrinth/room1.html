@@ -27,24 +27,31 @@
   <body class="start-page">
     <!-- HEADER  -->
     <main class="start-content">
-      <div id="body" class="start-hero">
+      <div id="body" class="start-hero light">
         <a href="failure.html"><img src="/assets/img/icons/dungeon.svg" class="start-logo" id="logo" alt="Logo" /></a>
-        
-
-        <h1 class="internal-title hide" id="dungeon-name">EN los <br>momentos Oscuros</h1>
-        <div class="start-card hide" id="message-container">
-          <p id="message-1">
-            Una voz profunda y enigmática te dice
-            <a href="#" id="btn_1" class="btn-start">Continuar</a>
-          </p>
-          <p id="message-2" class="hide">
-            Te reconozco, Narrador...<br> caminas sobre piedras que el olvido aún no ha podido morder.
-            <a href="#" id="btn_2" class="btn-start">Continuar</a>
-          </p>
-          <p id="message-3" class="hide">
-            Entra si te atreves, pero recuerda: en este Laberinto, lo que dejas de imaginar, deja de existir."
-            <a href="#" id="btn_3" class="btn-start">Continuar</a>
-          </p>
+        <div id="room1" class="room1">
+          <div><button class="btn_img" id="btn_key3"><img src="/assets/img/room_1/llave_3.png"></button></div>
+          <div></div>
+          <div><button class="btn_img" id="btn_key2"><img src="/assets/img/room_1/llave_2.png"></button></div>
+          <div>
+            <button class="btn_img  " id="btn_encender"><img id="imgOnOff" class="cristalOn " src=""></button>
+          </div>
+          <div id="cerradura">
+            <div id="contenedor-mensajes" style="width: 100%; height: 100%;">
+              <h1 class="internal-title hide" id="dungeon-name">EN los <br>momentos Oscuros</h1>
+              <p class="hero-subtitle hide" id="ayuda">Cuando la oscuridad sea total, la luz será tu llave. Síguela, y las puertas se rendirán ante ti.</p>
+              <p class="hero-subtitle hide" id="nollave">NO OCURRE NADA</p>
+              <p class="hero-subtitle hide" id="sillave">Suena la cerradura y se abre la puerta</p>
+            </div>
+          </div>
+          <div>
+              <button class="btn_img" id="btn_key1"><img src="/assets/img/room_1/llave_1.png"></button>
+          </div>
+          <div>
+              <button class="btn_img" id="btn_craneo"><img src="/assets/img/room_1/craneo.png"></button>
+          </div>
+          <div></div>
+          <div></div>
         </div>
       </div>
     </main>
@@ -62,6 +69,6 @@
 
       <div class="footer-right">Todos los derechos reservados | 2026</div>
     </footer>
-    <script src="/js/start.js"></script>
+    <script src="/js/room1.js"></script>
   </body>
 </html>
