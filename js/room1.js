@@ -56,7 +56,7 @@
         sillave.classList.replace("hide","show")
         setTimeout(()=> {
             sillave.classList.replace("show","hide")
-            window.location.href = "room2.html";
+            window.location.href = "success.html";
         },2000);
         
         }
