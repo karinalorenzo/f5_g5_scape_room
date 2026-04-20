@@ -47,24 +47,4 @@
   
   
 
-  /* -------------------------------------------------------
-   MEDIA QUERIES
-------------------------------------------------------- */
 
-@media (min-width: 768px) {
-    .conflict {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .player {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .player .section-text {
-      order: 1;
-    }
-  
-    .player .section-image {
-      order: 2;
-    }
-  }
