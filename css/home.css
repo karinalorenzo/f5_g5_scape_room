@@ -1,149 +1,188 @@
-
 /* -------------------------------------------------------
    HERO 
 ------------------------------------------------------- */
 
 .hero {
-    text-align: center;
-    padding: var(--space-xl) var(--space-s);
-  }
+  text-align: center;
+  padding: var(--space-xl) var(--space-s);
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  color: var(--gold);
+  text-shadow: var(--shadow-gold);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-subtitle {
+  font-family: var(--font-title);
+  font-size: var(--fs-subtitle);
+  color: var(--gold);
+  text-shadow: var(--shadow-gold);
+  margin-bottom: var(--space-l);
+}
+
+.hero-description {
+  font-size: var(--fs-subtitle);
+  max-width: 700px;
+  margin: var(--space-m) auto 0;
+}
+
+/* Button outline */
+.btn-outline {
+  display: inline-block;
+  margin-top: var(--space-m);
+  padding: 14px 30px;
+  border-radius: 10px;
+  border: 2px solid var(--gold);
+  font-family: var(--font-title);
+  font-size: var(--fs-button);
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.btn-outline:hover {
+  background-color: var(--gold);
+  color: var(--black);
+  box-shadow: 0 0 20px rgba(240, 208, 128, 0.4);
+}
   
-  .hero-title {
-    font-family: var(--font-title);
-    font-size: var(--fs-hero-title);
-    color: var(--gold);
-    text-shadow: var(--shadow-gold);
-    margin-bottom: var(--space-xl) var(--space-s);
-  }
+ /* -------------------------------------------------------
+   CONFLICT AND PLAYER SECTIONS 
+------------------------------------------------------- */
+
+.conflict,
+.player {
+  display: grid;
+  gap: var(--space-l);
+  align-items: center;
+  padding: var(--space-xl) var(--space-s);
+}
+
+.conflict .section-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.player .section-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.section-title {
+  font-size: 2.2rem;
+}
+
+.section-text {
+  max-width: 650px;
+  text-align: left;
+  font-size: var(--fs-subtitle);
+}
+
+.section-paragraph {
+  font-size: var(--fs-body-subtitle);
+  max-width: 600px;
+  margin: 0 0 var(--space-m);
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------
+   CTA SECTION
+------------------------------------------------------- */
+
+.cta {
+  margin-top: var(--space-xl);
+}
+
+.cta-media {
+  position: relative;
+}
+
+.cta-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.cta-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centrado en móvil */
+}
+
+.btn-start {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 10px;
+  border: 2px solid var(--gold-strong);
+  background: rgba(0, 0, 0, 0.8);
+  font-family: var(--font-title);
+  font-size: var(--fs-button);
+  color: var(--gold-strong);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.btn-start:hover {
+  background-color: var(--gold);
+  color: var(--black);
+  box-shadow: 0 0 20px rgba(240, 208, 128, 0.4);
+}
+
   
-  .hero-subtitle {
-    font-family: var(--font-title);
-    font-size: var(--fs-subtitle);
-    color: var(--gold);
-    text-shadow: var(--shadow-gold);
-    margin-bottom: var(--space-l) var(--space-s);
-  }
-  
-  .hero-description {
-    font-size: var(--fs-subtitle);
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: var(--space-m);
-  }
-  
-  /* Button outline */
-  .btn-outline {
-    display: inline-block;
-    margin-top: var(--space-m);
-    padding: 14px 30px;
-    border-radius: 10px;
-    border: 2px solid var(--gold);
-    font-family: var(--font-title);
-    font-size: var(--fs-button);
-    color: var(--gold);
-    text-transform: uppercase;
-  }
-  
-  .btn-outline:hover {
-    background-color: var(--gold);
-    color: var(--black);
-    box-shadow: 0 0 20px rgba(240, 208, 128, 0.4);
-  }
-  
-  
-  /* -------------------------------------------------------
-     CONFLICT AND PLAYER SECTIONS 
-  ------------------------------------------------------- */
-  
-  .conflict {
-    display: grid;
-    gap: var(--space-l);
-    align-items: center;
-    padding: var(--space-xl) var(--space-s);
-  }
-  
-  .conflict .section-image {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-  }
-  
-  .section-text {
-    max-width: 650px;
-    text-align: left;
-    font-size: var(--fs-subtitle);
-  }
-  
-  .section-paragraph {
-    font-size: var(--fs-body-subtitle);
-    max-width: 600px;
-    margin: 0 0 var(--space-m);
-    line-height: 1.7;
-  }
-  
+/* -------------------------------------------------------
+   MEDIA QUERIES
+------------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Conflict & Player */
+  .conflict,
   .player {
-    display: grid;
-    gap: var(--space-l);
-    align-items: center;
-    padding: var(--space-xl) var(--space-s);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
   }
-  
-  .player .section-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-  
+
   .player .section-text {
-    max-width: 600px;
+    order: 1;
   }
-  
-  /* -------------------------------------------------------
-     CTA SECTION
-  ------------------------------------------------------- */
-  
-  .cta {
-    margin-top: var(--space-xl);
+
+  .player .section-image {
+    order: 2;
   }
-  
-  .cta-media {
-    position: relative;
+
+  .section-title {
+    font-size: var(--fs-section-title);
   }
-  
-  .cta-image {
-    width: 100%;
-    display: block;
-    object-fit: cover;
+
+  /* Hero */
+  .hero {
+    padding: var(--space-xxl) var(--space-m);
   }
-  
+
+  .hero-title {
+    font-size: var(--fs-hero-title); 
+  }
+
+  .hero-subtitle {
+    font-size: calc(var(--fs-subtitle) * 1.1);
+  }
+
+  .hero-description {
+    font-size: calc(var(--fs-subtitle) * 1.05);
+  }
+
+  /* CTA */
   .cta-content {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
+    justify-content: flex-start; /* botón a la izquierda */
+    padding-left: var(--space-xl);
   }
-  
-  .btn-start {
-    display: inline-block;
-    padding: 16px 40px;
-    border-radius: 10px;
-    border: 2px solid var(--gold-strong);
-    background: rgba(0, 0, 0, 0.8);
-    font-family: var(--font-title);
-    font-size: var(--fs-button);
-    color: var(--gold-strong);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-    margin-left: 150px;
-  }
-  
-  .btn-start:hover {
-    background-color: var(--gold);
-    color: var(--black);
-    box-shadow: 0 0 20px rgba(240, 208, 128, 0.4);
-  }
-  
-  
+}
