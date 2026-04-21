@@ -1,6 +1,6 @@
 
     /**
-     * definicion de variables
+     * definición de variables
      */
     const contenedorCaras=document.getElementById("contenedorCaras")
     const title = document.getElementById("dungeon-name");
@@ -83,14 +83,14 @@
             if(accion==1){
                 if(pausa<3){
                     espera(1)
-                    mostrar_mensaje("no sucede nada, pero se escucha")
+                    mostrar_mensaje("Solo lo escuchas dormir")
                     roncando.currentTime = 0;
                     roncando.play().catch(error => {
                         console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                     });
                 }else{
                     reacciones.classList.remove("hide");
-                    mensaje_.innerText = "Gracias por dejarme descanzar, por eso te dejo pasar";
+                    mensaje_.innerText = "Gracias por dejarme descansar, por eso te dejo pasar";
 
                     setTimeout(()=> {
                         sonidoPuerta.currentTime = 0;
@@ -104,15 +104,15 @@
                 }
             }else if(accion==2){
                 espera(0)
-                mostrar_mensaje("dejame dormir, estoy canzado")
+                mostrar_mensaje("déjame descansar un poco más...")
             }else{
                 espera(0)
-                mostrar_mensaje("hey hey ¿que te pasa?")
+                mostrar_mensaje("hey hey ¿qué te pasa? déjame dormir, estoy cansado")
             }
         }else if(seleccion==2){//reir
             if(accion==1){
                 espera(1)
-                mostrar_mensaje("no sucede nada, pero se escucha")
+                mostrar_mensaje("no sucede nada, pero se escuchan los ronquidos de alguien")
                 roncando.currentTime = 0;
                     roncando.play().catch(error => {
                         console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
@@ -123,7 +123,7 @@
                 risa.play().catch(error => {
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
-                mostrar_mensaje("repite burlonamente lo que dices, y se rie muy alto")
+                mostrar_mensaje("repite burlonamente lo que dices, y se ríe muy alto")
             }else{
                 espera(0)
                 
@@ -131,12 +131,12 @@
                 risa.play().catch(error => {
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
-                mostrar_mensaje("hey hey ¿que te pasa?, y se rie muy alto")
+                mostrar_mensaje("hey hey ¿qué te pasa?, y se ríe muy alto")
             }
         }else{//gritar
             if(accion==1){
                 espera(1)
-                mostrar_mensaje("no sucede nada, pero se escucha")
+                mostrar_mensaje("no sucede nada, pero se escuchan los ronquidos de alguien")
                 roncando.currentTime = 0;
                 roncando.play().catch(error => {
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);

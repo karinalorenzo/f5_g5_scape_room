@@ -51,12 +51,7 @@
     color: var(--black);
   }
 
-    /* Button outline */
-  .btn-outline {
-    background-image: url(/assets/img/gray-bg.png);
-    
-  }
-  
+  /* Button outline */
   .btn-outline:hover {
     color: var(--white);
   }
