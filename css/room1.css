@@ -1,11 +1,9 @@
 .light {
-  background: url(/assets/img/room_1/salon_1_claro.jpg) center center / cover
-    no-repeat;
+  background: url(/assets/img/room_1/salon_1_claro.jpg) center center / cover no-repeat;
 }
 
 .dark {
-  background: url(/assets/img/room_1/salon_1_oscuro.jpg) center center / cover
-    no-repeat;
+  background: url(/assets/img/room_1/salon_1_oscuro.jpg) center center / cover no-repeat;
 }
 
 .cristalOn {
@@ -13,10 +11,6 @@
 }
 .cristalOff {
   content: url(/assets/img/room_1/off.png);
-}
-
-.start-card {
-  background: unset;
 }
 
 .room1 {
@@ -36,27 +30,6 @@
   height: 33.33%; /* Ensure 3 rows */
 }
 
-
-/* .room1 div:nth-child(1) {
-    
-  }
-
-  .room1 div:nth-child(2) {
-    
-  }
-
-  .room1 div:nth-child(3) {
-    
-  }
-
-  .room1 div:nth-child(4) {
-    
-  }
-
-  .room1 div:nth-child(5) {
-    
-  } */
-
 .room1 div:nth-child(6) {
   display: flex;
   flex-direction: column;
@@ -66,26 +39,6 @@
   display: flex;
   align-items: flex-end;
 }
-
-/*   .room1 div:nth-child(8) {
-    
-  }
-
-  .room1 div:nth-child(9) {
-    
-  } */
-
-.izquierda {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-}
-
-.hero-subtitle {
-  font-size: clamp(1rem, 0.8rem + 1vw, 1.6rem);
-  text-align: center;
-}
-
 
 body.cursor-key1,
 body.cursor-key1 * {
@@ -100,8 +53,4 @@ body.cursor-key2 * {
 body.cursor-key3,
 body.cursor-key3 * {
   cursor: url("/assets/img/room_1/llave_3_128.png"), auto !important;
-}
-
-.cursor-default {
-  cursor: default;
 }

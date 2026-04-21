@@ -21,12 +21,11 @@
 
     let mensaje_ = document.getElementById("mensaje")
     
-    const bgGrito = new Audio("../assets/sound/grito_FuFa990.mp3");
-    const risaGolpe = new Audio("../assets/sound/u_sb73n9hgyg-one-piece-luffy-laugh-sound-effect-332197.mp3");
-    const roncando = new Audio("../assets/sound/roncando.mp3")
-    const risa = new Audio("../assets/sound/universfield-sinister-laugh.mp3");
-    const grito = new Audio("../assets/sound/universfield-epic-war-combat-scream-352707.mp3");
-    const sonidoPuerta = new Audio("../assets/sound/dragon-studio-door-opening-454242.mp3");
+    const bgGrito = new Audio("../assets/sound/girlScream.mp3");
+    const roncando = new Audio("../assets/sound/snoring.mp3")
+    const risa = new Audio("../assets/sound/sinisterLaugh.mp3");
+    const grito = new Audio("../assets/sound/scream.mp3");
+    const sonidoPuerta = new Audio("../assets/sound/door_opening.mp3");
 
     let llave=0;
     /**
@@ -71,6 +70,23 @@
             reacciones.classList.add("hide")
         }, 3000)
     }
+    function ronquidos(){
+        reacciones.classList.remove("hide")
+
+        mensaje_.innerText="no sucede nada, pero se escuchan los ronquidos de alguien"
+        roncando.currentTime = 0;
+
+        roncando.play().catch(error => {
+            console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
+        });
+
+        setTimeout(()=> {
+            reacciones.classList.add("hide")
+        }, 5000)
+
+
+        
+    }
     function dejar_descansar(){
         setTimeout(()=> {
             mostrar_mensaje("se escucha a alguien decir déjenme descansar")
@@ -82,11 +98,12 @@
             if(accion==1){
                 if(pausa<3){
                     espera(1)
-                    mostrar_mensaje("Solo lo escuchas dormir")
                     roncando.currentTime = 0;
                     roncando.play().catch(error => {
                         console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                     });
+                    mostrar_mensaje("Solo lo escuchas dormir")
+                    
                 }else{
                     reacciones.classList.remove("hide");
                     mensaje_.innerText = "Gracias por dejarme descansar, por eso te dejo pasar";
@@ -111,11 +128,7 @@
         }else if(seleccion==2){//reir
             if(accion==1){
                 espera(1)
-                mostrar_mensaje("no sucede nada, pero se escuchan los ronquidos de alguien")
-                roncando.currentTime = 0;
-                    roncando.play().catch(error => {
-                        console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
-                    });
+                ronquidos()
             }else if(accion==2){
                 espera(0)
                 risa.currentTime = 0;
@@ -138,11 +151,7 @@
         }else{//gritar
             if(accion==1){
                 espera(1)
-                mostrar_mensaje("no sucede nada, pero se escuchan los ronquidos de alguien")
-                roncando.currentTime = 0;
-                roncando.play().catch(error => {
-                    console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
-                });
+                ronquidos()
             }else if(accion==2){
                 espera(0)
                 
@@ -150,11 +159,12 @@
                 grito.play().catch(error => {
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
+                mostrar_mensaje("comienza a gritar muy alto, solo malas palabras")
                 setTimeout(()=> {
-                    mostrar_mensaje("comienza a gritar muy alto, solo malas palabras")
+                    dejar_descansar()    
                 }, 1000);
                 
-                dejar_descansar()
+                
             }else{
                 espera(0)
 
@@ -220,7 +230,7 @@
         mostrar_mensaje("Quien no sabe soltar la carga en la almohada")
         setTimeout(()=> {
             mostrar_mensaje("No encontrará la llave en la alborada.")
-        },3000);
+        },2000);
         
     })
 /**

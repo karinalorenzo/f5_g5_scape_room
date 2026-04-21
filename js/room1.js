@@ -5,9 +5,9 @@
 
     let encendido=true
     const body=document.getElementById("body")
-    const onOff=document.getElementById("btn_encender")
-    const craneo = document.getElementById("btn_craneo")
-    const ayuda = document.getElementById("ayuda")
+    const onOff=document.getElementById("turnOnButton")
+    const craneo = document.getElementById("skullButton")
+    const ayuda = document.getElementById("help")
     const nollave=document.getElementById("nollave")
     const sillave=document.getElementById("sillave")
     const bodyt = document.body;
@@ -16,8 +16,6 @@
     const btn_key3 = document.getElementById("btn_key3")
     const cerradura = document.getElementById("cerradura")
     const title = document.getElementById("dungeon-name");
-
-    const sonidoPuerta = new Audio("../assets/sound/dragon-studio-door-opening-454242.mp3");
 
     let llave=0;
     /**
@@ -85,7 +83,7 @@
     }
 
     function restablecerCursores(){
-        bodyt.classList.remove("cursor-key1", "cursor-key2", "cursor-key3");      
+        document.body.classList.remove("cursor-key1", "cursor-key2", "cursor-key3");      
     }
 
     /**

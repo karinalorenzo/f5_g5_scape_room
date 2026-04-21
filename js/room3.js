@@ -16,6 +16,11 @@ const mensaje_ = document.getElementById("mensaje");
 const btn_pergamino = document.getElementById("btn_pergamino");
 const intentosText = document.getElementById("intentos");
 
+    const golemGrowl = new Audio("../assets/sound/golemGrowl.mp3");
+
+
+
+
 /**
  * ACERTIJO (todo el texto se maneja aquí)
  */
@@ -71,6 +76,12 @@ function iniciar() {
       contenedorCaras.classList.remove("hide");
       face_1.classList.add("animate-golem");
       btn_pergamino.classList.remove("hide");
+
+        golemGrowl.currentTime = 0;
+        golemGrowl.play().catch(error => {
+            console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
+        });
+
     }, 800);
 
   }, 3000);

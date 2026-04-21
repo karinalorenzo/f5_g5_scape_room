@@ -9,10 +9,8 @@
       name="description"
       content="Escape Room - A thrilling adventure game."
     />
-    <meta name="keywords" content="Escape Room, Adventure, Puzzle, Game" />
-    <meta name="author" content="Your Name" />
-
-    <link rel="icon" href="assets/img/icons/dungeon.svg" type="image/svg+xml" />
+    
+    <link rel="icon" href="/assets/img/icons/dungeon.svg" type="image/svg+xml" />
 
     <link
       rel="stylesheet"
@@ -34,7 +32,9 @@
   </head>
 
   <body class="start-page">
-    <audio id="bg-audio" autoplay loop></audio>
+    <audio id="bg-audio" autoplay loop>
+      <!--<source src="../assets/sound/dungeon_out.ogg" type="audio/ogg"/>-->
+    </audio>
 
     <!-- MAIN -->
     <main class="start-content">
@@ -58,7 +58,7 @@
 
         <!-- MENSAJES -->
         <div id="reacciones" class="hide">
-          <p class="hero-subtitle" id="mensaje"></p>
+          <p class="messageCard" id="mensaje"></p>
         </div>
 
         <!-- GOLEM -->

@@ -1,5 +1,5 @@
 /* -------------------------------------------------------
-   VARIABLES
+  VARIABLES
 ------------------------------------------------------- */
 :root {
   /* Colors */
@@ -38,7 +38,7 @@
 }
 
 /* -------------------------------------------------------
-   BASE STYLES
+  BASE STYLES
 ------------------------------------------------------- */
 
 body {
@@ -70,4 +70,15 @@ a {
   cursor: pointer;
   background-color: transparent;
   border: 0;
+}
+
+.messageCard {
+  background: rgba(202, 168, 116, 0.9);
+  padding: 1rem;
+  border-radius: 15px;
+  color: var(--black);
+  font-family: var(--font-title);
+  margin-bottom: var(--space-l);
+  text-align: center;
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.6rem);
 }
