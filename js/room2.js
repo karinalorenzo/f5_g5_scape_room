@@ -17,16 +17,15 @@
 
     let acciones = document.getElementById("acciones")
     let reacciones = document.getElementById("reacciones")
-    
+    const btn_pergamino =  document.getElementById("btn_pergamino")
+
     let mensaje_ = document.getElementById("mensaje")
+    
     const bgGrito = new Audio("../assets/sound/grito_FuFa990.mp3");
     const risaGolpe = new Audio("../assets/sound/u_sb73n9hgyg-one-piece-luffy-laugh-sound-effect-332197.mp3");
     const roncando = new Audio("../assets/sound/roncando.mp3")
     const risa = new Audio("../assets/sound/universfield-sinister-laugh.mp3");
-
     const grito = new Audio("../assets/sound/universfield-epic-war-combat-scream-352707.mp3");
-
-    
     const sonidoPuerta = new Audio("../assets/sound/dragon-studio-door-opening-454242.mp3");
 
     let llave=0;
@@ -36,29 +35,25 @@
 
     function iniciar(){
         bloquear()
-        //onOff.hidden=true
         title.classList.replace("hide", "show");
         title.classList.add("animate-zoom"); 
         setTimeout(()=> {
         title.classList.replace("animate-zoom", "animate-zoom-out");
         title.classList.replace("show", "hide");
-        //document.getElementById("room1").style.height="80vh"
         desbloquear()
-        //onOff.hidden=false
         }, 4000);
     }
 
     function bloquear(){
-        //contenedorCaras.hidden=true
         contenedorCaras.classList.add("hide")
         acciones.classList.add("hide")
         reacciones.classList.add("hide")
-        /*[contenedorCaras].forEach(el => el.hidden = true);*/
-        
+        btn_pergamino.classList.add("hide")
     }
 
     function desbloquear(){
         contenedorCaras.classList.remove("hide")
+        btn_pergamino.classList.remove("hide")
     }
 
 
@@ -76,7 +71,11 @@
             reacciones.classList.add("hide")
         }, 3000)
     }
-
+    function dejar_descanzar(){
+        setTimeout(()=> {
+            mostrar_mensaje("se escucha a aguien decir dejenme descanzar")
+        }, 2000);
+    }
     function mostrar_reacciones(accion){
         ocultar_acciones()
         if(seleccion==1){ //sueño
@@ -124,6 +123,8 @@
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
                 mostrar_mensaje("repite burlonamente lo que dices, y se ríe muy alto")
+                dejar_descanzar()
+                
             }else{
                 espera(0)
                 
@@ -132,6 +133,7 @@
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
                 mostrar_mensaje("hey hey ¿qué te pasa?, y se ríe muy alto")
+                dejar_descanzar()
             }
         }else{//gritar
             if(accion==1){
@@ -148,7 +150,11 @@
                 grito.play().catch(error => {
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
-                mostrar_mensaje("comienza a gritar muy alto, solo malas palabras")
+                setTimeout(()=> {
+                    mostrar_mensaje("comienza a gritar muy alto, solo malas palabras")
+                }, 1000);
+                
+                dejar_descanzar()
             }else{
                 espera(0)
 
@@ -156,7 +162,8 @@
                 bgGrito.play().catch(error => {
                     console.error("El navegador bloqueó el audio. ¡Haz clic en la página primero!", error);
                 });
-                mostrar_mensaje("Grita muy fuerte de miedo")
+                mostrar_mensaje("Grita muy fuerte de miedo")               
+                dejar_descanzar()
             }
         }
         quitar_seleccion()
@@ -209,37 +216,13 @@
         mostrar_reacciones(3)
     })
 
-    /*
-    onOff.addEventListener("click", () => {
-        encendido ? lightOff() : lightOn();
-        encendido = !encendido;
-    })
-    
-    craneo.addEventListener("click",()=>{
-        craneo.disabled = true;
-        ayuda.classList.replace("hide","show")
-        document.getElementById("imgOnOff").hidden=true;
-        bloquear()
+    btn_pergamino.addEventListener("click",()=>{
+        mostrar_mensaje("Quien no sabe soltar la carga en la almohada")
         setTimeout(()=> {
-        document.getElementById("imgOnOff").hidden=false;
-        desbloquear()
-        ayuda.classList.replace("show","hide")
-        craneo.disabled = false;
-        },5000);
-    });
-
-    [face_1, face_2, face_3].forEach((btn, i) => {
-        const num = i + 1;
-        btn.addEventListener("click", () => {
-            restablecerCursores();
-            llave = num;
-            bodyt.classList.add("cursor-key" + num);
-            btn_key1.hidden = (num === 1);
-            btn_key2.hidden = (num === 2);
-            btn_key3.hidden = (num === 3);
-        })
+            mostrar_mensaje("No encontrará la llave en la alborada.")
+        },3000);
+        
     })
-    */
 /**
  *  iniciar 
  */
