@@ -35,11 +35,7 @@
   width: 33.33%; /* Ensure 3 columns */
   height: 33.33%; /* Ensure 3 rows */
 }
-.btn_img {
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-}
+
 
 /* .room1 div:nth-child(1) {
     

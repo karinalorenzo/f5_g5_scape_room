@@ -22,27 +22,46 @@
     <link rel="stylesheet" href="/css/start.css" />
     <link rel="stylesheet" href="/css/room2.css" />
     <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+      
+      .caras, .acciones{ 
+        display: flex;
+        gap: 20px;
+      }
+      .caras img{
+        height: 140px;
+
+      }
+      .seleccion{
+            filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 1));
+      }
+    </style>
   </head>
 
   <body class="start-page">
+    <audio id="bg-audio" autoplay loop>
+      <!--<source src="../assets/sound/dungeon_out.ogg" type="audio/ogg"/>-->
+    </audio>
+    
     <!-- HEADER  -->
     <main class="start-content">
       <div id="body" class="start-hero">
         <a href="failure.html"><img src="/assets/img/icons/dungeon.svg" class="start-logo" id="logo" alt="Logo" /></a>
         <h1 class="internal-title hide" id="dungeon-name">EL  DILEMA DE <br>LAS TRES CARAS</h1>
-        <div class="start-card hide" id="message-container">
-          <p id="message-1">
-            Una voz profunda y enigmática te dice
-            <a href="#" id="btn_1" class="btn-start">Continuar</a>
-          </p>
-          <p id="message-2" class="hide">
-            Te reconozco, Narrador...<br> caminas sobre piedras que el olvido aún no ha podido morder.
-            <a href="#" id="btn_2" class="btn-start">Continuar</a>
-          </p>
-          <p id="message-3" class="hide">
-            Entra si te atreves, pero recuerda: en este Laberinto, lo que dejas de imaginar, deja de existir."
-            <a href="#" id="btn_3" class="btn-start">Continuar</a>
-          </p>
+        <div id="reacciones" class="hide">
+          <p class="hero-subtitle" id="mensaje"></p>
+        </div>
+        <div id="contenedorCaras">
+          <button id="face_1" class="btn_img"><img src="/assets/img/room_2/calma.png"></button>
+          <button id="face_2" class="btn_img"><img src="/assets/img/room_2/risa.png"></button>
+          <button id="face_3" class="btn_img"><img src="/assets/img/room_2/ira.png"></button>
+        </div>
+        <div id="acciones">
+          <div class="acciones">
+            <button class="btn-start" id="accion_1">Ver</button>
+            <button class="btn-start" id="accion_2">Hablar</button>
+            <button class="btn-start" id="accion_3">Golpear</button>
+          </div>
         </div>
       </div>
     </main>
@@ -60,6 +79,6 @@
 
       <div class="footer-right">Todos los derechos reservados | 2026</div>
     </footer>
-    <script src="/js/start.js"></script>
+    <script src="/js/room2.js"></script>
   </body>
 </html>

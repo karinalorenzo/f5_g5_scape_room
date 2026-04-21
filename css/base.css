@@ -66,3 +66,8 @@ a {
   color: inherit;
 }
 
+.btn_img {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
