@@ -4,3 +4,13 @@
 .start-card{
     background: unset;
 }
+.caras, .acciones{ 
+    display: flex;
+    gap: 20px;
+}
+.caras img{
+    height: 140px;
+}
+.seleccion{
+    filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 1));
+}

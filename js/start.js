@@ -40,3 +40,5 @@
     document.getElementById("btn_2").addEventListener("click",(e)=>{
         hideShowMessage("paso2")
     })
+    
+    document.getElementById('bg-audio').volume = 0.1;

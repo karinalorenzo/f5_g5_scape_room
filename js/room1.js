@@ -121,8 +121,8 @@
         })
     })
 
-/**
- *  iniciar 
- */
+    /**
+    *  iniciar 
+    */
+
     iniciar()
-    document.getElementById('bg-audio').volume = 0.1;
