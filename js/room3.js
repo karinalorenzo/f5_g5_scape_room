@@ -187,3 +187,6 @@ accion_3.addEventListener("click", () => evaluarRespuesta(2));
  * INICIAR ESCENA
  */
 iniciar();
+
+function prisa() {}
+function fin() {}

@@ -237,3 +237,6 @@
  *  iniciar 
  */
     iniciar()
+
+function prisa() {}
+function fin() {}

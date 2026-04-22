@@ -82,3 +82,32 @@ a {
   text-align: center;
   font-size: clamp(1rem, 0.8rem + 1vw, 1.6rem);
 }
+
+/* -------------------------------------------------------
+  TEMPORIZADOR
+------------------------------------------------------- */
+#timer {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 100;
+  background: rgba(11, 12, 17, 0.75);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+
+#timer.timer-prisa #timer-display,
+#timer-display.timer-prisa {
+  color: #e05c5c;
+  animation: parpadeo 0.8s step-start infinite;
+}
+
+@keyframes parpadeo {
+  50% { opacity: 0.3; }
+}

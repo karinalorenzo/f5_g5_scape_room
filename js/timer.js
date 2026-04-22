@@ -1,0 +1,53 @@
+/**
+ * TEMPORIZADOR COMPARTIDO
+ * Persiste el tiempo restante en sessionStorage entre room1, room2 y room3.
+ * Llama a window.prisa() al llegar a 20s y a window.fin() al llegar a 0s.
+ */
+
+const TIEMPO_INICIAL = 120;
+const CLAVE_STORAGE = "tiempoRestante";
+const BASE_FONT_SIZE = 40; // px (equivalente a ~1.4rem)
+
+const timerDisplay = document.getElementById("timer-display");
+
+// Recuperar tiempo de sessionStorage o iniciar desde 60
+let tiempoRestante = parseInt(sessionStorage.getItem(CLAVE_STORAGE) ?? TIEMPO_INICIAL, 10);
+
+let prisaLlamada = tiempoRestante <= 20; // no volver a llamar si ya pasó
+
+function actualizarDisplay() {
+  timerDisplay.textContent = tiempoRestante + "s";
+
+  const porcentajeTranscurrido = (TIEMPO_INICIAL - tiempoRestante) / TIEMPO_INICIAL;
+  timerDisplay.style.fontSize = (BASE_FONT_SIZE * (2     + porcentajeTranscurrido)) + "px";
+
+  if (tiempoRestante <= 20) {
+    timerDisplay.classList.add("timer-prisa");
+  }
+}
+
+function hurryUp(){
+    // el tamaño ya se gestiona dinámicamente en actualizarDisplay
+}
+function end(){
+   window.location.href = "failure.html";
+}
+
+actualizarDisplay();
+
+const intervalo = setInterval(() => {
+  tiempoRestante--;
+  sessionStorage.setItem(CLAVE_STORAGE, tiempoRestante);
+  actualizarDisplay();
+
+  if (tiempoRestante <= 20 && !prisaLlamada) {
+    prisaLlamada = true;
+    hurryUp()
+  }
+
+  if (tiempoRestante <= 0) {
+    clearInterval(intervalo);
+    sessionStorage.removeItem(CLAVE_STORAGE);
+    window.location.href = "failure.html";
+  }
+}, 1000);

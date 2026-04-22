@@ -125,3 +125,6 @@
     */
 
     iniciar()
+
+function prisa() {}
+function fin() {}
