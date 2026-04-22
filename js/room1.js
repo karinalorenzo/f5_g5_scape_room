@@ -1,6 +1,6 @@
 
     /**
-     * definición de variables
+     * definicion de variables
      */
 
     let encendido=true
@@ -20,7 +20,7 @@
 
     let llave=0;
     /**
-     * Funciones
+     * Functiones
      */
 
     function iniciar(){
