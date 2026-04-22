@@ -40,5 +40,19 @@
     padding: 0.5rem 1rem;
     text-align: center;
   }
-  
+
+  #contenedorCaras{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .acciones{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
   
