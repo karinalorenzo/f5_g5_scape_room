@@ -58,7 +58,7 @@ All design decisions, technical notes, and detailed documentation are available 
 ### Documentation and organization
 ![Notion](https://img.shields.io/badge/-Notion-000000?style=flat&logo=notion&logoColor=white)
 ![Google Docs](https://img.shields.io/badge/-Google%20Docs-4285F4?style=flat&logo=google-docs&logoColor=white)
-
+![Miro](https://img.shields.io/badge/-Miro-050038?style=flat&logo=miro&logoColor=yellow)
 
 ## Autors
 Karina Lorenzo y Daniel Molina
